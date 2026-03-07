@@ -83,7 +83,25 @@ nav {
 }
 .hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 420px; height: 420px; background: radial-gradient(circle, rgba(30,79,194,.08), transparent 70%); border-radius: 50%; }
 .hero-text { z-index: 1; display: flex; flex-direction: column; }
-.hero-badge { display: inline-flex; align-items: center; gap: 7px; background: var(--blue-light); color: var(--blue); font-size: 13px; font-weight: 600; padding: 6px 16px; border-radius: 20px; margin-top: 28px; letter-spacing: .5px; text-transform: uppercase; align-self: flex-start; }
+.hero-visit-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+.hero-visit-badge { display: inline-flex; align-items: center; gap: 7px; background: #fff7e6; color: #b45309; border: 1.5px solid #fbbf24; font-size: 13.5px; font-weight: 700; padding: 7px 16px; border-radius: 20px; letter-spacing: .3px; }
+.hero-visit-badge strong { font-size: 15px; color: #92400e; }
+.hero-visit-badge--teal { background: #e6faf8; color: #0b7a6e; border-color: #0e9f8e; }
+.hero-visit-badge--teal strong { color: #065f52; }
+.hero-badge { display: inline-flex; align-items: center; gap: 7px; background: var(--blue-light); color: var(--blue); font-size: 13px; font-weight: 600; padding: 6px 16px; border-radius: 20px; letter-spacing: .5px; text-transform: uppercase; }
+
+/* ── ₹99 VISIT STRIP ────────────────────────────────────── */
+.visit-strip { background: linear-gradient(90deg, #1e4fc2 0%, #0e9f8e 100%); padding: 0; }
+.visit-strip-inner { display: flex; align-items: center; justify-content: center; gap: 22px; padding: 24px 8%; flex-wrap: wrap; text-align: center; }
+.visit-strip-icon { font-size: 36px; flex-shrink: 0; }
+.visit-strip-text { min-width: 200px; }
+.visit-strip-text strong { display: block; font-size: 21px; color: #fff; font-weight: 800; letter-spacing: -.2px; }
+.visit-strip-text span { font-size: 13.5px; color: rgba(255,255,255,.85); margin-top: 3px; display: block; }
+.visit-strip-text em { font-style: normal; font-weight: 700; color: #fff; }
+.visit-strip-pills { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.visit-pill { background: rgba(255,255,255,.18); color: #fff; font-size: 13px; font-weight: 700; padding: 8px 16px; border-radius: 20px; white-space: nowrap; }
+.visit-strip-btn { flex-shrink: 0; background: #fff; color: var(--blue); font-size: 14px; font-weight: 800; padding: 12px 28px; border-radius: 30px; text-decoration: none; transition: transform .2s, box-shadow .2s; box-shadow: 0 4px 16px rgba(0,0,0,.15); white-space: nowrap; }
+.visit-strip-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
 .hero h1 { font-family: 'Fraunces', serif; font-size: clamp(34px, 4.5vw, 58px); line-height: 1.12; color: var(--dark); margin-bottom: 18px; }
 .hero h1 em { font-style: normal; color: var(--blue); }
 .hero h1 span { color: var(--teal); }
@@ -341,6 +359,9 @@ footer h4 { color: #fff; font-size: 14px; margin-bottom: 14px; }
   .cta-band { padding: 40px 5%; }
   footer { padding: 40px 5% 24px; }
   .social-cards { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
+  .visit-strip-inner { padding: 18px 5%; gap: 14px; }
+  .visit-strip-text strong { font-size: 17px; }
+  .visit-strip-btn { width: 100%; text-align: center; }
   .feature-strip { flex-wrap: wrap; padding: 0 5%; }
   .feature-pill { flex: 1 1 50%; border-bottom: 1.5px solid rgba(255,255,255,.2); font-size: 13.5px; white-space: normal; justify-content: flex-start; }
   .feature-pill:nth-child(odd) { border-right: 1.5px solid rgba(255,255,255,.2); }

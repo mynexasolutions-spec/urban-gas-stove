@@ -13,7 +13,11 @@
       <a href="tel:9772134944" class="btn-blue">📞 Call Now: 9772134944</a>
       <a href="https://wa.me/919772134944" class="btn-outline">💬 WhatsApp Us</a>
     </div>
-    <div class="hero-badge">⚡ Same-Day Doorstep Service</div>
+    <div class="hero-visit-row">
+      <div class="hero-visit-badge">🏠 Home Visit Only <strong>₹99</strong></div>
+      <div class="hero-visit-badge hero-visit-badge--teal">⏰ Arrives in <strong>30 Min</strong></div>
+      <div class="hero-badge">⚡ Same-Day Service</div>
+    </div>
   </div>
   <div class="hero-img-col">
     <img class="hero-main-img" src="{{ url_for('static', filename='images/banner_image.webp') }}" alt="Gas stove repair technician"/>
@@ -99,6 +103,21 @@
     <div class="svc-card"><img src="{{ url_for('static', filename='images/services/chimney_pcb_repair.webp') }}" alt="Chimney PCB Repair"/><div class="svc-card-body"><h3>Chimney PCB Repair</h3><p>Fix electronic control board issues in your chimney.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('Chimney PCB Repair','We repair or replace faulty PCB modules in chimneys, fixing unresponsive controls, speed settings, and LED display faults.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('Chimney PCB Repair')">Book Now</button></div></div></div>
   </div>
 </section>
+
+<!-- ── ₹99 VISIT STRIP ───────────────────────────────────── -->
+<div class="visit-strip">
+  <div class="visit-strip-inner">
+    <span class="visit-strip-icon">🏠</span>
+    <div class="visit-strip-text">
+      <strong>Home Visit Charges — Only ₹99!</strong>
+      <span>Technician arrives within <em>30 minutes</em> &middot; Call us or book on WhatsApp</span>
+    </div>
+    <div class="visit-strip-pills">
+      <div class="visit-pill">⏰ 30-Min Arrival</div>
+      <a href="https://wa.me/919772134944?text=Hi%2C+I+want+to+book+a+service.+Home+visit+%E2%82%B999." target="_blank" class="visit-strip-btn">Book Now</a>
+    </div>
+  </div>
+</div>
 
 <!-- ── BRANDS ─────────────────────────────────────────────── -->
 <section class="brands" id="brands">
