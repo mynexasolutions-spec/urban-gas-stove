@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_from_directory
 
 app = Flask(__name__)
 
@@ -6,6 +6,16 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template("pages/index.html")
+
+
+@app.route("/robots.txt")
+def robots():
+    return send_from_directory(app.static_folder, "robots.txt")
+
+
+@app.route("/sitemap.xml")
+def sitemap():
+    return send_from_directory(app.static_folder, "sitemap.xml", mimetype="application/xml")
 
 
 @app.route("/submit-request", methods=["POST"])
