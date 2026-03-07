@@ -172,7 +172,7 @@ section { padding: 72px 8%; }
 .steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; position: relative; }
 .steps-row::before { content: ''; position: absolute; top: 116px; left: 18%; right: 18%; height: 2px; background: linear-gradient(90deg, var(--blue), var(--teal)); z-index: 0; }
 .step { text-align: center; position: relative; z-index: 1; }
-.step-img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; margin-bottom: 18px; box-shadow: var(--shadow); }
+.step-img { width: 100%; height: 240px; object-fit: cover; border-radius: 14px; margin-bottom: 18px; box-shadow: var(--shadow); }
 .step-num { width: 52px; height: 52px; border-radius: 50%; background: var(--blue); color: #fff; font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; box-shadow: 0 0 0 6px #fff, 0 0 0 8px var(--blue-light); }
 .step h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
 .step p { font-size: 14.5px; color: var(--gray); line-height: 1.6; }
@@ -217,7 +217,7 @@ section { padding: 72px 8%; }
 .contact { background: var(--white); }
 .contact-wrap { display: grid; grid-template-columns: 1fr 1.3fr; gap: 50px; align-items: start; }
 .contact-info h3 { font-family: 'Fraunces', serif; font-size: 26px; margin-bottom: 20px; }
-.contact-img { width: 100%; border-radius: 18px; height: 200px; object-fit: cover; margin-bottom: 24px; box-shadow: var(--shadow); }
+.contact-img { width: 100%; border-radius: 18px; height: auto; object-fit: contain; margin-bottom: 24px; box-shadow: var(--shadow); display: block; }
 .cinfo-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 18px; }
 .cinfo-icon { width: 42px; height: 42px; border-radius: 10px; background: var(--blue-light); color: var(--blue); font-size: 18px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .cinfo-item strong { display: block; font-size: 14px; color: var(--gray); margin-bottom: 2px; }

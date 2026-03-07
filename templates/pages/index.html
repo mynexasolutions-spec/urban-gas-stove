@@ -16,7 +16,7 @@
     <div class="hero-badge">⚡ Same-Day Doorstep Service</div>
   </div>
   <div class="hero-img-col">
-    <img class="hero-main-img" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=85" alt="Gas stove repair technician"/>
+    <img class="hero-main-img" src="{{ url_for('static', filename='images/banner_image.webp') }}" alt="Gas stove repair technician"/>
   </div>
 </section>
 
@@ -41,7 +41,7 @@
 <!-- ── WHY CHOOSE US ──────────────────────────────────────── -->
 <section class="why" id="why">
   <div class="why-grid">
-    <img class="why-img" src="https://images.unsplash.com/photo-1649949895070-7b6dd3b07cd0?q=80&w=2068&auto=format&fit=crop" alt="Professional technician"/>
+    <img class="why-img" src="{{ url_for('static', filename='images/Kitchen_deserves_best.webp') }}" alt="Professional technician"/>
     <div>
       <div class="sec-label">Why Choose Us</div>
       <div class="sec-title">Your Kitchen Deserves the Best</div>
@@ -121,19 +121,19 @@
   </div>
   <div class="steps-row">
     <div class="step">
-      <img class="step-img" src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=400&q=75" alt="Book service"/>
+      <img class="step-img" src="{{ url_for('static', filename='images/book_your_service.PNG') }}" alt="Book service"/>
       <div class="step-num">1</div>
       <h3>Book Your Service</h3>
       <p>Call, WhatsApp, or fill our online form. Share your appliance issue and preferred time slot.</p>
     </div>
     <div class="step">
-      <img class="step-img" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&q=75" alt="Technician visits"/>
+      <img class="step-img" src="{{ url_for('static', filename='images/technician_visit.webp') }}" alt="Technician visits"/>
       <div class="step-num">2</div>
       <h3>Technician Visits</h3>
       <p>Our certified technician arrives at your doorstep with all tools and genuine spare parts.</p>
     </div>
     <div class="step">
-      <img class="step-img" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=75" alt="Fix and test"/>
+      <img class="step-img" src="{{ url_for('static', filename='images/fix_and_test.webp') }}" alt="Fix and test"/>
       <div class="step-num">3</div>
       <h3>Fix &amp; Test</h3>
       <p>We repair, clean, test performance, and ensure everything works perfectly before leaving.</p>
@@ -244,7 +244,7 @@
   <div class="sec-title">Book a Service</div>
   <div class="contact-wrap">
     <div class="contact-info">
-      <img class="contact-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Hyderabad"/>
+      <img class="contact-img" src="{{ url_for('static', filename='images/book_a_service.webp') }}" alt="Book a service"/>
       <h3>Urban Gas Stove Repairs</h3>
       <div class="cinfo-item"><div class="cinfo-icon">📞</div><div><strong>Phone / WhatsApp</strong><a href="tel:9772134944">9772134944</a></div></div>
       <div class="cinfo-item"><div class="cinfo-icon">👤</div><div><strong>Owner</strong><span>Prakash</span></div></div>
@@ -283,6 +283,12 @@
             <option>Chimney Deep Cleaning</option>
             <option>Chimney Installation</option>
             <option>Chimney PCB Repair</option>
+          </optgroup>
+          <optgroup label="Other">
+            <option>General Inspection</option>
+            <option>Spare Parts Replacement</option>
+            <option>Annual Maintenance Contract (AMC)</option>
+            <option>Others</option>
           </optgroup>
         </select>
       </div>
