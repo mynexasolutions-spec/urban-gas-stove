@@ -1,0 +1,295 @@
+{% extends 'base.html' %}
+
+{% block title %}Urban Gas Stove Repairs – Hyderabad{% endblock %}
+
+{% block content %}
+
+<!-- ── HERO ──────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Expert <em>Gas Stove</em><br/>& <span>Chimney</span> Repairs<br/>in Hyderabad</h1>
+    <p class="hero-desc">Professional repair, deep cleaning, and installation for gas stoves, hobs, LPG pipes, and chimneys. Certified technicians with genuine spare parts at your doorstep.</p>
+    <div class="hero-btns">
+      <a href="tel:9772134944" class="btn-blue">📞 Call Now: 9772134944</a>
+      <a href="https://wa.me/919772134944" class="btn-outline">💬 WhatsApp Us</a>
+    </div>
+    <div class="hero-badge">⚡ Same-Day Doorstep Service</div>
+  </div>
+  <div class="hero-img-col">
+    <img class="hero-main-img" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=85" alt="Gas stove repair technician"/>
+  </div>
+</section>
+
+<!-- ── STATS STRIP ────────────────────────────────────────── -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="hero-stat"><strong>500+</strong><span>Happy Customers</span></div>
+    <div class="hero-stat"><strong>1000+</strong><span>Services Done</span></div>
+    <div class="hero-stat"><strong>5.0★</strong><span>Avg. Rating</span></div>
+    <div class="hero-stat"><strong>20+</strong><span>Brands Served</span></div>
+  </div>
+</div>
+
+<!-- ── FEATURE STRIP ─────────────────────────────────────── -->
+<div class="feature-strip">
+  <div class="feature-pill"><span class="fp-check">✓</span> Certified &amp; experienced technicians</div>
+  <div class="feature-pill"><span class="fp-check">✓</span> Genuine spare parts for all brands</div>
+  <div class="feature-pill"><span class="fp-check">✓</span> Transparent pricing, no hidden charges</div>
+  <div class="feature-pill"><span class="fp-check">✓</span> Warranty on all repairs</div>
+</div>
+
+<!-- ── WHY CHOOSE US ──────────────────────────────────────── -->
+<section class="why" id="why">
+  <div class="why-grid">
+    <img class="why-img" src="https://images.unsplash.com/photo-1649949895070-7b6dd3b07cd0?q=80&w=2068&auto=format&fit=crop" alt="Professional technician"/>
+    <div>
+      <div class="sec-label">Why Choose Us</div>
+      <div class="sec-title">Your Kitchen Deserves the Best</div>
+      <p class="sec-sub">We bring certified expertise, original spare parts, and fast doorstep service to every job.</p>
+      <div class="features">
+        <div class="feat"><div class="feat-icon fi-b">🔧</div><h3>Certified Technicians</h3><p>Trained professionals with years of hands-on experience servicing all major appliance brands.</p></div>
+        <div class="feat"><div class="feat-icon fi-t">📦</div><h3>Genuine Spare Parts</h3><p>We stock authentic OEM spare parts for quick and long-lasting replacements.</p></div>
+        <div class="feat"><div class="feat-icon fi-b">⚡</div><h3>Same-Day Service</h3><p>Fast response with same-day visits across all major areas of Hyderabad.</p></div>
+        <div class="feat"><div class="feat-icon fi-t">🛡️</div><h3>Warranty on Repairs</h3><p>All repairs come with warranty coverage and fully transparent billing.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ───────────────────────────────────────────── -->
+<section class="services" id="services">
+  <div class="sec-head">
+    <div class="sec-label">What We Fix</div>
+    <div class="sec-title">Our Professional Services</div>
+    <p class="sec-sub">Select a category to explore individual services.</p>
+  </div>
+  <div class="services-tabs">
+    <button class="tab-btn active" onclick="switchTab('stove',this)">🍳 Gas Stove &amp; Hob</button>
+    <button class="tab-btn" onclick="switchTab('lpg',this)">🔩 LPG Pipe</button>
+    <button class="tab-btn" onclick="switchTab('chimney',this)">🏭 Chimney</button>
+  </div>
+
+
+  <!-- Gas Stove & Hob Tab -->
+  <div class="tab-content active" id="tab-stove">
+    <div class="svc-card"><img src="{{ url_for('static', filename='images/services/gas_stove_repair.webp') }}" alt="Gas Stove Repair"/><div class="svc-card-body"><h3>Gas Stove Repair</h3><p>Complete diagnosis and repair of all gas stove faults.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('Gas Stove Repair','We diagnose and repair all types of gas stove issues including burner faults, ignition problems, and frame damage. All brands covered with genuine parts.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('Gas Stove Repair')">Book Now</button></div></div></div>
+    <div class="svc-card"><img src="{{ url_for('static', filename='images/services/gas_hob_repair.webp') }}" alt="Gas Hob Repair"/><div class="svc-card-body"><h3>Gas Hob Repair</h3><p>Expert repair for built-in gas hobs of all brands.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('Gas Hob Repair','Our technicians fix all gas hob issues including uneven flames, faulty burners, and connection problems. Servicing Elica, Faber, Prestige, and more.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('Gas Hob Repair')">Book Now</button></div></div></div>
+    <div class="svc-card"><img src="{{ url_for('static', filename='images/services/gas_leakage_repair.webp') }}" alt="Gas Leakage Fix"/><div class="svc-card-body"><h3>Gas Stove Leakage Fix</h3><p>Safe and quick detection and fixing of gas leaks.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('Gas Stove Leakage Fix','Gas leaks are dangerous. Our technicians use professional leak detectors to locate and seal leaks, replace faulty seals, and verify safety before leaving.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('Gas Stove Leakage Fix')">Book Now</button></div></div></div>
+    <div class="svc-card"><img src="{{ url_for('static', filename='images/services/hop_ignition_repair.webp') }}" alt="Ignition Repair"/><div class="svc-card-body"><h3>Gas Hob Ignition Repair</h3><p>Fix auto-ignition failures and clicking issues fast.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('Gas Hob Ignition Repair','We repair or replace faulty igniters, spark plugs, and control knobs. Your hob will light reliably again on the very first click.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('Gas Hob Ignition Repair')">Book Now</button></div></div></div>
+    <div class="svc-card"><img src="{{ url_for('static', filename='images/services/hob_installation.webp') }}" alt="Hob Installation"/><div class="svc-card-body"><h3>Gas Hob Installation</h3><p>Safe and proper installation with gas line connections.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('Gas Hob Installation','We install all types of gas hobs with proper gas line connections, sealing, and safety testing. Available for new kitchens and relocations.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('Gas Hob Installation')">Book Now</button></div></div></div>
+    <div class="svc-card"><img src="{{ url_for('static', filename='images/services/gas_stove_clearning.webp') }}" alt="Gas Stove Cleaning"/><div class="svc-card-body"><h3>Gas Stove Cleaning</h3><p>Thorough cleaning for better flame and efficiency.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('Gas Stove Cleaning','We disassemble and deep clean burners, grates, and the stove top to remove grease and food buildup, restoring optimal performance.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('Gas Stove Cleaning')">Book Now</button></div></div></div>
+    <div class="svc-card"><img src="{{ url_for('static', filename='images/services/hob_deep_cleaning.webp') }}" alt="Gas Hob Deep Cleaning"/><div class="svc-card-body"><h3>Gas Hob Deep Cleaning</h3><p>Complete deep clean for spotless hob performance.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('Gas Hob Deep Cleaning','Full disassembly cleaning of all hob components including burner caps, jet nozzles, and drip trays using professional-grade solutions.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('Gas Hob Deep Cleaning')">Book Now</button></div></div></div>
+    <div class="svc-card"><img src="{{ url_for('static', filename='images/services/gas_hob_flame_repair.webp') }}" alt="Gas Hob Flame Repair"/><div class="svc-card-body"><h3>Gas Hob Flame Repair</h3><p>Fix weak, uneven, or yellow flames on your hob.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('Gas Hob Flame Repair','We clean and unclog burner nozzles, calibrate gas flow, and restore strong, even blue flames for efficient and safe cooking.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('Gas Hob Flame Repair')">Book Now</button></div></div></div>
+    <div class="svc-card"><img src="{{ url_for('static', filename='images/services/gas_hob_major_service.webp') }}" alt="Gas Hob Major Servicing"/><div class="svc-card-body"><h3>Gas Hob Major Servicing</h3><p>Complete overhaul, cleaning, and performance testing.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('Gas Hob Major Servicing','Our comprehensive major service covers full disassembly, deep cleaning, parts inspection, replacement of worn components, and final performance testing.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('Gas Hob Major Servicing')">Book Now</button></div></div></div>
+  </div>
+
+  <!-- LPG Pipe Tab -->
+  <div class="tab-content" id="tab-lpg">
+    <div class="svc-card"><img src="{{ url_for('static', filename='images/services/lpg_copper_pipe_installation.webp') }}" alt="LPG Copper Pipe"/><div class="svc-card-body"><h3>LPG Copper Pipe Installation</h3><p>Safe and certified copper gas pipe installation at home.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('LPG Copper Pipe Installation','We install ISI-certified copper gas piping from cylinder to appliance, with proper fittings, pressure testing, and leak verification for complete safety.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('LPG Copper Pipe Installation')">Book Now</button></div></div></div>
+    <div class="svc-card"><img src="{{ url_for('static', filename='images/services/gas_leakage_repair.webp') }}" alt="Pipe Leak Fix"/><div class="svc-card-body"><h3>Gas Pipe Leak Detection &amp; Fix</h3><p>Professional leak detection and safe pipe repairs.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('Gas Pipe Leak Detection & Fix','Using electronic detectors we locate any gas leak in your piping and seal or replace the affected section, followed by full pressure testing.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('Gas Pipe Leak Fix')">Book Now</button></div></div></div>
+    <div class="svc-card"><img src="{{ url_for('static', filename='images/services/lpg_copper_pipe_installation.webp') }}" alt="Gas Line Inspection"/><div class="svc-card-body"><h3>Gas Line Safety Inspection</h3><p>Full safety inspection for compliant gas lines.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('Gas Line Safety Inspection','A thorough safety audit of all gas connections, regulators, pipes, and appliance inlets to identify wear, corrosion, or improper fittings.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('Gas Line Safety Inspection')">Book Now</button></div></div></div>
+  </div>
+
+  <!-- Chimney Tab -->
+  <div class="tab-content" id="tab-chimney">
+    <div class="svc-card"><img src="{{ url_for('static', filename='images/services/kitchen_chimney_repair.webp') }}" alt="Chimney Repair"/><div class="svc-card-body"><h3>Chimney Repair</h3><p>Expert repair for all chimney faults and breakdowns.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('Chimney Repair','We diagnose and repair all chimney faults including suction loss, noise issues, and filter problems across all major brands.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('Chimney Repair')">Book Now</button></div></div></div>
+    <div class="svc-card"><img src="{{ url_for('static', filename='images/services/chimney_motor_repair_replacement.webp') }}" alt="Chimney Motor"/><div class="svc-card-body"><h3>Chimney Motor Repair / Replacement</h3><p>Fix or replace chimney motor for powerful suction.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('Chimney Motor Repair / Replacement','We service and replace faulty chimney motors with OEM-compatible units, restoring full suction power and quiet operation.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('Chimney Motor Repair')">Book Now</button></div></div></div>
+    <div class="svc-card"><img src="{{ url_for('static', filename='images/services/chimney_deep_cleaning.webp') }}" alt="Chimney Deep Cleaning"/><div class="svc-card-body"><h3>Chimney Deep Cleaning</h3><p>Restore airflow and eliminate grease with deep cleaning.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('Chimney Deep Cleaning','Full disassembly and professional cleaning of filters, duct, and motor housing to remove years of built-up grease and odours.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('Chimney Deep Cleaning')">Book Now</button></div></div></div>
+    <div class="svc-card"><img src="{{ url_for('static', filename='images/services/chimney_installation.webp') }}" alt="Chimney Installation"/><div class="svc-card-body"><h3>Chimney Installation</h3><p>Professional setup for optimal kitchen ventilation.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('Chimney Installation','We install all types of kitchen chimneys with proper wall mounting, duct routing, and electrical connection. Available for new and replacement setups.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('Chimney Installation')">Book Now</button></div></div></div>
+    <div class="svc-card"><img src="{{ url_for('static', filename='images/services/chimney_pcb_repair.webp') }}" alt="Chimney PCB Repair"/><div class="svc-card-body"><h3>Chimney PCB Repair</h3><p>Fix electronic control board issues in your chimney.</p><div class="svc-card-actions"><button class="btn-sm btn-learn" onclick="openModal('Chimney PCB Repair','We repair or replace faulty PCB modules in chimneys, fixing unresponsive controls, speed settings, and LED display faults.')">Learn More</button><button class="btn-sm btn-book" onclick="scrollBook('Chimney PCB Repair')">Book Now</button></div></div></div>
+  </div>
+</section>
+
+<!-- ── BRANDS ─────────────────────────────────────────────── -->
+<section class="brands" id="brands">
+  <div class="sec-head">
+    <div class="sec-label">Top Brands We Serve</div>
+    <div class="sec-title">Brands We Service &amp; Stock Parts For</div>
+    <p class="sec-sub">Genuine spare parts available. PAN-India delivery.</p>
+  </div>
+  <div class="brands-img-wrap">
+    <img class="brands-img" src="{{ url_for('static', filename='images/brands.webp') }}" alt="Top Brands We Service"/>
+  </div>
+</section>
+
+<!-- ── PROCESS ────────────────────────────────────────────── -->
+<section class="process" id="process">
+  <div class="sec-head">
+    <div class="sec-label">How It Works</div>
+    <div class="sec-title">3 Easy Steps to Get Serviced</div>
+    <p class="sec-sub">From booking to fix — we make it effortless for you.</p>
+  </div>
+  <div class="steps-row">
+    <div class="step">
+      <img class="step-img" src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=400&q=75" alt="Book service"/>
+      <div class="step-num">1</div>
+      <h3>Book Your Service</h3>
+      <p>Call, WhatsApp, or fill our online form. Share your appliance issue and preferred time slot.</p>
+    </div>
+    <div class="step">
+      <img class="step-img" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&q=75" alt="Technician visits"/>
+      <div class="step-num">2</div>
+      <h3>Technician Visits</h3>
+      <p>Our certified technician arrives at your doorstep with all tools and genuine spare parts.</p>
+    </div>
+    <div class="step">
+      <img class="step-img" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=75" alt="Fix and test"/>
+      <div class="step-num">3</div>
+      <h3>Fix &amp; Test</h3>
+      <p>We repair, clean, test performance, and ensure everything works perfectly before leaving.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── REVIEWS ────────────────────────────────────────────── -->
+<section class="reviews" id="reviews">
+  <div class="sec-head">
+    <div class="sec-label">Customer Reviews</div>
+    <div class="sec-title">What Our Customers Say</div>
+    <p class="sec-sub">Trusted by hundreds of households across Hyderabad.</p>
+  </div>
+  <div class="reviews-track-wrap">
+    <div class="reviews-track" id="reviewsTrack">
+      <div class="review-card"><div class="rev-stars">★★★★★</div><p>Technician arrived on time and fixed our gas hob ignition quickly. Very professional, clean work, and reasonable pricing. Highly recommended!</p><div class="reviewer"><div class="rev-av">R</div><div><div class="rev-name">Ravi Kumar</div><div class="rev-area">Banjara Hills</div></div></div></div>
+      <div class="review-card"><div class="rev-stars">★★★★★</div><p>Got my chimney deep cleaned and motor replaced in one visit. Suction is like new. Transparent pricing with no surprise charges at all.</p><div class="reviewer"><div class="rev-av">S</div><div><div class="rev-name">Sunita Reddy</div><div class="rev-area">Gachibowli</div></div></div></div>
+      <div class="review-card"><div class="rev-stars">★★★★★</div><p>They detected a gas leakage immediately and fixed it safely. Very careful and professional. I feel safe using my stove again. Excellent service!</p><div class="reviewer"><div class="rev-av">P</div><div><div class="rev-name">Prasad Naidu</div><div class="rev-area">Madhapur</div></div></div></div>
+      <div class="review-card"><div class="rev-stars">★★★★★</div><p>Same-day appointment was a big relief. Restored ignition on two burners, checked gas lines, and gave safety tips. Very neat and reasonably priced.</p><div class="reviewer"><div class="rev-av">A</div><div><div class="rev-name">Arun Sharma</div><div class="rev-area">Mehdipatnam</div></div></div></div>
+      <div class="review-card"><div class="rev-stars">★★★★★</div><p>Real value for money. Genuine parts, fair billing, and documented warranty. My chimney performance has improved significantly since the service.</p><div class="reviewer"><div class="rev-av">N</div><div><div class="rev-name">Neha Joshi</div><div class="rev-area">Jubilee Hills</div></div></div></div>
+      <div class="review-card"><div class="rev-stars">★★★★★</div><p>LPG copper pipe installation done very neatly. Clean work, all joints tested, and they explained safety procedures clearly. Very satisfied!</p><div class="reviewer"><div class="rev-av">V</div><div><div class="rev-name">Vijay Rao</div><div class="rev-area">Kukatpally</div></div></div></div>
+      <div class="review-card"><div class="rev-stars">★★★★★</div><p>PCB repair on my chimney done in one visit. Controls now work perfectly. Technician was knowledgeable and polite. Will definitely call again!</p><div class="reviewer"><div class="rev-av">K</div><div><div class="rev-name">Kavitha Murthy</div><div class="rev-area">Secunderabad</div></div></div></div>
+      <div class="review-card"><div class="rev-stars">★★★★★</div><p>Thorough cleaning and duct check improved suction a lot. Used proper tools, protected the counters, and left the kitchen spotless after service.</p><div class="reviewer"><div class="rev-av">M</div><div><div class="rev-name">Manohar Das</div><div class="rev-area">Uppal</div></div></div></div>
+    </div>
+  </div>
+  <div class="slider-controls">
+    <button class="slider-btn" id="prevBtn">&#8592;</button>
+    <button class="slider-btn" id="nextBtn">&#8594;</button>
+  </div>
+  <div class="slider-dots" id="sliderDots"></div>
+</section>
+
+<!-- ── FAQ ───────────────────────────────────────────────── -->
+<section class="faq" id="faq">
+  <div class="faq-wrap">
+    <img class="faq-img" src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&q=80" alt="Kitchen appliance service"/>
+    <div>
+      <div class="sec-label">FAQ</div>
+      <div class="sec-title">Frequently Asked Questions</div>
+      <p class="sec-sub" style="margin-bottom:28px;">Everything you need to know about our services.</p>
+      <div class="faq-list">
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>What does gas hob deep cleaning include?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>Deep cleaning covers full disassembly of burner caps, nozzles, drip trays, and control knobs. We use professional-grade degreasers to remove all grease and food residue, then reassemble and test performance.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>How often should I service my gas stove or hob?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>We recommend a professional service every 6–12 months depending on usage. Regular servicing prevents gas leaks, improves flame quality, and extends the life of your appliance.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Do you use genuine spare parts?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>Yes! We stock OEM-compatible and original spare parts for all major brands including Elica, Faber, Prestige, Pigeon, Kaff, and more. You can verify the parts used during the visit.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Is chimney PCB repair possible or do I need a new chimney?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>In most cases, PCB repair is possible and much more economical than buying a new chimney. Our technicians diagnose the exact fault on the circuit board and repair or replace only the affected component.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>How quickly can you provide service?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>We offer same-day service for most areas in Hyderabad. For urgent gas leakage issues, we prioritize visits. Simply call or WhatsApp us and we will schedule at your earliest convenience.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>What warranty do you offer on repairs?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>All repairs come with a service warranty. The duration depends on the type of repair and parts used. Our technician will explain the warranty terms clearly before starting work.</p></div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Is LPG copper pipe installation safe at home?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>Absolutely, when done by certified professionals. We use ISI-marked copper pipes and fittings, perform pressure testing, and verify zero leakage before completing the installation.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BAND ───────────────────────────────────────────── -->
+<div class="cta-band">
+  <div>
+    <h2>Ready for a Same-Day Kitchen Fix?</h2>
+    <p>Call Prakash and the team — available 7 days a week across Hyderabad.</p>
+  </div>
+  <a href="tel:9772134944" class="btn-white">📞 Call 9772134944</a>
+</div>
+
+<!-- ── SOCIAL MEDIA ─────────────────────────────────────── -->
+<section class="social-section">
+  <div class="sec-head">
+    <div class="sec-label">Follow Us</div>
+    <div class="sec-title">Connect With Us</div>
+    <p class="sec-sub">Stay updated with repair tips, service videos, and offers on our social channels.</p>
+  </div>
+  <div class="social-cards">
+    <a href="https://wa.me/919772134944" target="_blank" class="social-card sc-wa">
+      <div class="sc-header">
+        <div class="sc-icon">💬</div>
+        <div class="sc-name">WhatsApp</div>
+      </div>
+      <div class="sc-body">
+        <div class="sc-handle">Chat with us directly for quick bookings & queries</div>
+        <div class="sc-btn">Message Us</div>
+      </div>
+    </a>
+    <a href="https://www.instagram.com/urban.gas.stoverepairs/" target="_blank" class="social-card sc-ig">
+      <div class="sc-header">
+        <div class="sc-icon">📸</div>
+        <div class="sc-name">Instagram</div>
+      </div>
+      <div class="sc-body">
+        <div class="sc-handle">@urban.gas.stoverepairs — tips, reels &amp; behind-the-scenes</div>
+        <div class="sc-btn">Follow Us</div>
+      </div>
+    </a>
+    <a href="https://www.youtube.com/@gasstoverepairhyderabad" target="_blank" class="social-card sc-yt">
+      <div class="sc-header">
+        <div class="sc-icon">▶️</div>
+        <div class="sc-name">YouTube</div>
+      </div>
+      <div class="sc-body">
+        <div class="sc-handle">@gasstoverepairhyderabad — repair tutorials &amp; service demos</div>
+        <div class="sc-btn">Subscribe</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ── CONTACT ────────────────────────────────────────────── -->
+<section class="contact" id="contact">
+  <div class="sec-label">Contact Us</div>
+  <div class="sec-title">Book a Service</div>
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <img class="contact-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Hyderabad"/>
+      <h3>Urban Gas Stove Repairs</h3>
+      <div class="cinfo-item"><div class="cinfo-icon">📞</div><div><strong>Phone / WhatsApp</strong><a href="tel:9772134944">9772134944</a></div></div>
+      <div class="cinfo-item"><div class="cinfo-icon">👤</div><div><strong>Owner</strong><span>Prakash</span></div></div>
+      <div class="cinfo-item"><div class="cinfo-icon">📍</div><div><strong>Address</strong><span>R D Tower, Prem Nagar, Hyderabad, Telangana</span></div></div>
+      <div class="cinfo-item"><div class="cinfo-icon">🌐</div><div><strong>Website</strong><span>www.urbangasstoverepairs.com</span></div></div>
+      <div class="cinfo-item"><div class="cinfo-icon">🕐</div><div><strong>Working Hours</strong><span>Monday – Sunday: 8:00 AM – 8:00 PM</span></div></div>
+    </div>
+    <div class="contact-form">
+      <h3>Send a Service Request</h3>
+      <div class="form-row">
+        <div class="fg"><label>Full Name</label><input type="text" id="cf-name" placeholder="Your name"/></div>
+        <div class="fg"><label>Phone Number</label><input type="tel" id="cf-phone" placeholder="+91 XXXXX XXXXX"/></div>
+      </div>
+      <div class="fg"><label>Area / Locality</label><input type="text" placeholder="Your area in Hyderabad"/></div>
+      <div class="fg">
+        <label>Service Type</label>
+        <select id="cf-service">
+          <option value="">Select a service</option>
+          <optgroup label="Gas Stove &amp; Hob">
+            <option>Gas Stove Repair</option>
+            <option>Gas Hob Repair</option>
+            <option>Gas Stove Leakage Fix</option>
+            <option>Gas Hob Ignition Repair</option>
+            <option>Gas Hob Installation</option>
+            <option>Gas Stove Cleaning</option>
+            <option>Gas Hob Deep Cleaning</option>
+            <option>Gas Hob Flame Repair</option>
+            <option>Gas Hob Major Servicing</option>
+          </optgroup>
+          <optgroup label="LPG Pipe">
+            <option>LPG Copper Pipe Installation</option>
+          </optgroup>
+          <optgroup label="Chimney">
+            <option>Chimney Repair</option>
+            <option>Chimney Motor Repair / Replacement</option>
+            <option>Chimney Deep Cleaning</option>
+            <option>Chimney Installation</option>
+            <option>Chimney PCB Repair</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="fg"><label>Problem Details</label><textarea id="cf-msg" placeholder="Briefly describe the issue..."></textarea></div>
+      <button class="form-sub" onclick="submitForm()">Send Request 🚀</button>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

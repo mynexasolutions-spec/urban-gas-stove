@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% block title %}Urban Gas Stove Repairs – Hyderabad{% endblock %}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon/favicon-16x16.png') }}"/>
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon/favicon.ico') }}" type="image/x-icon"/>
+  <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}"/>
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+  {% include 'partials/navbar.html' %}
+
+  {% block content %}{% endblock %}
+
+  {% include 'partials/footer.html' %}
+
+  <!-- FLOAT BUTTONS -->
+  <div class="float-buttons">
+    <a href="https://wa.me/919772134944?text=Hi%2C+I+need+gas+stove+repair+service." class="float-btn float-wa" title="WhatsApp">💬</a>
+    <a href="tel:9772134944" class="float-btn float-tel" title="Call Now">📞</a>
+  </div>
+
+  <!-- SERVICE MODAL -->
+  <div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <h3 id="modal-title"></h3>
+      <div class="modal-sub">Service Details</div>
+      <p class="modal-body" id="modal-body"></p>
+      <button class="form-sub" onclick="closeModal();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book This Service 🚀</button>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  {% block extra_scripts %}{% endblock %}
+
+</body>
+</html>

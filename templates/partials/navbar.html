@@ -1,0 +1,41 @@
+<div class="topbar">
+  📞 Call for urgent service: <a href="tel:9772134944">9772134944</a> &nbsp;|&nbsp; Mon–Sun 8AM–8PM · Hyderabad
+</div>
+
+<nav>
+  <a href="/" class="logo">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Urban Gas Stove Repairs" class="logo-img"/>
+    <div class="logo-text">
+      <strong>Urban Gas Stove Repairs</strong>
+      <span>Certified · Hyderabad</span>
+    </div>
+  </a>
+
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#brands">Brands</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-cta">Book Now</a></li>
+    </ul>
+    <a href="tel:9772134944" class="nav-call">📞 Call Now</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#services">Services</a>
+    <a href="#brands">Brands</a>
+    <a href="#process">Process</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#faq">FAQ</a>
+    <a href="tel:9772134944" class="nav-call">📞 Call Now</a>
+    <button class="mobile-book-btn" onclick="scrollBook('General Service')">Contact Now</button>
+  </div>
+</nav>
