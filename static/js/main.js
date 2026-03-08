@@ -119,6 +119,11 @@ function submitForm() {
     + (service ? '\n*Service:* ' + service : '')
     + (message ? '\n*Details:* ' + message : '');
 
+  // Google Ads conversion tracking — Contact form submission
+  if (typeof gtag === 'function') {
+    gtag('event', 'conversion', {'send_to': 'AW-18001660447/6ccoCM6b9oQcEJ-U7odD'});
+  }
+
   window.open('https://wa.me/919772134944?text=' + encodeURIComponent(text), '_blank');
 
   document.getElementById('cf-name').value = '';
