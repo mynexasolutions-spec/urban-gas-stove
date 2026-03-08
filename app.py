@@ -6,14 +6,15 @@ app = Flask(__name__)
 
 # ── HELPER: load blogs ────────────────────────────────────
 def load_blogs():
-    data_path = os.path.join(app.static_folder, 'data', 'blogs.json')
+    data_path = os.path.join(os.path.dirname(__file__), 'static', 'data', 'blogs.json')
     with open(data_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 
 @app.route("/")
 def index():
-    return render_template("pages/index.html")
+    blogs = load_blogs()
+    return render_template("pages/index.html", blogs=blogs)
 
 
 @app.route("/blogs")
