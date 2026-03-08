@@ -69,21 +69,21 @@
 
           {% elif section.type == 'checklist' %}
             <ul class="blog-checklist">
-              {% for item in section.items %}
+              {% for item in section.list %}
               <li>✔ {{ item }}</li>
               {% endfor %}
             </ul>
 
           {% elif section.type == 'bullet_list' %}
             <ul class="blog-bullets">
-              {% for item in section.items %}
+              {% for item in section.list %}
               <li>{{ item }}</li>
               {% endfor %}
             </ul>
 
           {% elif section.type == 'numbered_list' %}
             <ol class="blog-numbered">
-              {% for item in section.items %}
+              {% for item in section.list %}
               <li>{{ item }}</li>
               {% endfor %}
             </ol>

@@ -59,7 +59,7 @@
       },
       {
         "type": "checklist",
-        "items": [
+        "list": [
           "Certified technicians",
           "Same-day service",
           "Genuine spare parts",
@@ -88,7 +88,7 @@
       },
       {
         "type": "numbered_list",
-        "items": [
+        "list": [
           "Gas stove not igniting or taking too long to light.",
           "Yellow or orange flame instead of a normal blue flame.",
           "Weak or uneven flame on the burners.",
@@ -167,7 +167,7 @@
       },
       {
         "type": "bullet_list",
-        "items": [
+        "list": [
           "Reduce cooking efficiency",
           "Increase gas consumption",
           "Produce carbon monoxide, which can be harmful"
