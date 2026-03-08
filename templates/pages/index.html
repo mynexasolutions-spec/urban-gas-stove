@@ -267,7 +267,7 @@
       <h3>Urban Gas Stove Repairs</h3>
       <div class="cinfo-item"><div class="cinfo-icon">📞</div><div><strong>Phone / WhatsApp</strong><a href="tel:9772134944">9772134944</a></div></div>
       <div class="cinfo-item"><div class="cinfo-icon">👤</div><div><strong>Owner</strong><span>Prakash</span></div></div>
-      <div class="cinfo-item"><div class="cinfo-icon">📍</div><div><strong>Address</strong><span>R D Tower, Prem Nagar, Hyderabad, Telangana</span></div></div>
+      <div class="cinfo-item"><div class="cinfo-icon">📍</div><div><strong>Address</strong><span>Hyderabad, Telangana</span></div></div>
       <div class="cinfo-item"><div class="cinfo-icon">🌐</div><div><strong>Website</strong><span>www.urbangasstoverepairs.com</span></div></div>
       <div class="cinfo-item"><div class="cinfo-icon">🕐</div><div><strong>Working Hours</strong><span>Monday – Sunday: 8:00 AM – 8:00 PM</span></div></div>
     </div>
@@ -313,6 +313,39 @@
       </div>
       <div class="fg"><label>Problem Details</label><textarea id="cf-msg" placeholder="Briefly describe the issue..."></textarea></div>
       <button class="form-sub" onclick="submitForm()">Send Request 🚀</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOME BLOGS ─────────────────────────────────────────── -->
+<section class="home-blogs" id="blogs">
+  <div class="home-blogs-inner">
+    <div class="sec-label" style="text-align:center">From Our Blog</div>
+    <h2 class="home-blogs-heading">Tips, Guides &amp; Repair Advice</h2>
+    <p class="home-blogs-sub">Stay informed with expert gas stove tips and maintenance guides from our certified technicians.</p>
+
+    <div class="blog-grid">
+      {% for blog in blogs %}
+      <article class="blog-card">
+        <div class="blog-card-emoji">{{ blog.cover_emoji }}</div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-tag">{{ blog.category }}</span>
+            <span class="blog-dot">·</span>
+            <span class="blog-date">{{ blog.date }}</span>
+            <span class="blog-dot">·</span>
+            <span class="blog-read">{{ blog.read_time }}</span>
+          </div>
+          <h2 class="blog-card-title">{{ blog.title }}</h2>
+          <p class="blog-card-desc">{{ blog.short_description }}</p>
+          <a href="{{ url_for('blog_detail', slug=blog.slug) }}" class="blog-read-btn">Read Article</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="home-blogs-footer">
+      <a href="{{ url_for('blogs') }}" class="btn-blue">📖 Explore All Blogs</a>
     </div>
   </div>
 </section>
