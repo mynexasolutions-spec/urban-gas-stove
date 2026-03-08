@@ -1,11 +1,36 @@
-from flask import Flask, render_template, request, jsonify, send_from_directory
+import json
+import os
+from flask import Flask, render_template, request, jsonify, send_from_directory, abort
 
 app = Flask(__name__)
+
+# ── HELPER: load blogs ────────────────────────────────────
+def load_blogs():
+    data_path = os.path.join(app.static_folder, 'data', 'blogs.json')
+    with open(data_path, 'r', encoding='utf-8') as f:
+        return json.load(f)
 
 
 @app.route("/")
 def index():
     return render_template("pages/index.html")
+
+
+@app.route("/blogs")
+def blogs():
+    all_blogs = load_blogs()
+    return render_template("pages/blogs.html", blogs=all_blogs)
+
+
+@app.route("/blogs/<slug>")
+def blog_detail(slug):
+    all_blogs = load_blogs()
+    blog = next((b for b in all_blogs if b["slug"] == slug), None)
+    if not blog:
+        abort(404)
+    # Related blogs: other 2 posts
+    related = [b for b in all_blogs if b["slug"] != slug]
+    return render_template("pages/blog_detail.html", blog=blog, related=related)
 
 
 @app.route("/robots.txt")

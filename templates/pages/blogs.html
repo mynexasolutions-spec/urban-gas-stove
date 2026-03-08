@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Gas Stove Repair Blogs – Tips & Guides | Urban Gas Stove Repairs{% endblock %}
+
+{% block extra_head %}
+<meta name="description" content="Read expert tips, repair guides, and maintenance advice for gas stoves, hobs, and chimneys in Hyderabad. Brought to you by Urban Gas Stove Repairs."/>
+<link rel="canonical" href="https://www.urbangasstoverepairs.com/blogs"/>
+<meta property="og:title" content="Gas Stove Repair Blogs – Tips & Guides | Urban Gas Stove Repairs"/>
+<meta property="og:description" content="Expert gas stove tips, repair guides, and maintenance advice for Hyderabad households."/>
+<meta property="og:url" content="https://www.urbangasstoverepairs.com/blogs"/>
+{% endblock %}
+
+{% block content %}
+
+<!-- ── BLOG HERO ───────────────────────────────────────── -->
+<section class="blog-hero">
+  <div class="blog-hero-inner">
+    <span class="blog-hero-badge">📖 Expert Guides</span>
+    <h1>Gas Stove Repair &amp; Maintenance Blogs</h1>
+    <p>Practical tips, common problem fixes, and expert advice to keep your kitchen running safely in Hyderabad.</p>
+  </div>
+</section>
+
+<!-- ── BLOG GRID ───────────────────────────────────────── -->
+<section class="blog-grid-section">
+  <div class="container">
+    <div class="blog-grid">
+      {% for blog in blogs %}
+      <article class="blog-card">
+        <div class="blog-card-emoji">{{ blog.cover_emoji }}</div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-tag">{{ blog.category }}</span>
+            <span class="blog-dot">·</span>
+            <span class="blog-date">{{ blog.date }}</span>
+            <span class="blog-dot">·</span>
+            <span class="blog-read">{{ blog.read_time }}</span>
+          </div>
+          <h2 class="blog-card-title">{{ blog.title }}</h2>
+          <p class="blog-card-desc">{{ blog.short_description }}</p>
+          <a href="{{ url_for('blog_detail', slug=blog.slug) }}" class="blog-read-btn">Read Article →</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ── BLOGS PAGE CTA ─────────────────────────────────── -->
+<section class="blog-cta-section">
+  <div class="container">
+    <div class="blog-cta-box">
+      <div class="blog-cta-text">
+        <h2>Need Gas Stove Repair in Hyderabad?</h2>
+        <p>Don't wait for small issues to become big problems. Our certified technicians offer same-day doorstep service across Hyderabad — starting at just ₹99.</p>
+        <ul class="blog-cta-bullets">
+          <li>✅ Same-day service</li>
+          <li>✅ Certified technicians</li>
+          <li>✅ Genuine spare parts</li>
+          <li>✅ Transparent pricing</li>
+        </ul>
+      </div>
+      <div class="blog-cta-actions">
+        <a href="https://wa.me/919772134944?text=Hi%2C+I+need+gas+stove+repair+service.+Please+confirm+availability."
+           class="blog-cta-wa-btn" target="_blank" rel="noopener">
+          💬 Chat on WhatsApp
+        </a>
+        <a href="tel:9772134944" class="blog-cta-call-btn">
+          📞 Call 9772134944
+        </a>
+        <p class="blog-cta-note">Mon – Sun &nbsp;|&nbsp; 8 AM – 8 PM &nbsp;|&nbsp; Hyderabad</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
